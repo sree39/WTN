@@ -1,0 +1,78 @@
+Is N an exact multiple of M? 
+===========================
+import java.io.*;
+import  java.util.*;
+class UserMaincode{
+public int isMultiple(int input1,int input2)
+if(input1==0||input2==0)
+		{
+			return 3;
+		}
+		
+			if(Math.abs(input1)%input2==0)
+			{
+				return 2;
+			}
+			else
+			{
+				return 1;
+			}
+			
+	}
+}
+
+Of given 5 numbers, how many are even?
+======================================
+import java.io.*;
+import  java.util.*;
+class UserMaincode{
+public int countEvens(int input1,int input2,int input3,int input4,int input5)
+int c=0;
+		if(Math.abs(input1)%2==0)
+		{
+		c++;
+		}
+		if(Math.abs(input2)%2==0)
+		{
+			c++;
+		}
+		if(Math.abs(input3)%2==0)
+		{
+			c++;
+		}
+		if(Math.abs(input4)%2==0)
+		{
+			c++;
+		}
+		if(Math.abs(input5)%2==0)
+		{
+			c++;
+		}
+
+		return c;
+
+	}
+}
+
+Of given 5 numbers, how many are odd?
+=====================================
+import java.io.*;
+import  java.util.*;
+class UserMaincode{
+public int countodds(int input1,int input2,int input3,int input4,int input5)
+int c=0;
+int a[]={input1,input2,input3,input4,input5};
+		int c=0;
+		for(int i=0;i<a.length;i++)
+		{
+			if(a[i]%2!=0)
+			{
+				c++;
+			}
+		}
+		return c;
+	}
+}
+Of 5 numbers, how many are even or odd?
+=======================================
+

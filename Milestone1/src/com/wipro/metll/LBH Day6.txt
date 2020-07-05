@@ -1,0 +1,82 @@
+Is Prime?
+===========
+import java.io.*;
+import  java.util.*;
+class UserMainCode{
+public int isPrime(int input1){
+ int i,c=0;
+for( i=1;i<=input1;i++)
+{
+ if(input1%i==0)
+  {
+    c++;
+  }
+}
+if(c==2)
+{
+return 2;
+}
+else
+{
+return 1;
+}	
+}
+}
+
+Factorial of a number
+=====================
+import java.io.*;
+import  java.util.*;
+class UserMainCode{
+int nFactorial(int input1){
+int fact=1;
+for(int i=1;i<=input1;i++)
+{
+ fact=fact*i;
+}
+return fact;
+}
+}
+
+Nth Fibonacci
+=============
+import java.io.*;
+import  java.util.*;
+class UserMainCode{
+public long Fibonacci(int input1){
+int f1=0,f2=1;
+int f3;
+for(int i=1;i<input1;i++)
+{
+f3=f1+f2;
+f1=f2;
+f2=f3;
+}
+return f1;
+}
+}
+
+Nth Prime 
+=========
+import java.io.*;
+import  java.util.*;
+class UserMainCode{
+public long nthPrime(int input1){
+int c,num, i;
+c=0;
+num=1;
+while(c<input1)
+{
+num=num+1;
+for(i=2;i<=num;i++)
+{
+if(num%i==0){
+break;
+}
+}
+if(i==num){
+c++;
+}
+return num;
+}
+}

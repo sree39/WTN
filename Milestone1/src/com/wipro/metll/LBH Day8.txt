@@ -1,0 +1,106 @@
+digitSum : sum of all digits in N
+=================================
+import java.io.*;
+import  java.util.*;
+class UserMainCode{
+public int digitSum(int input1)
+{
+int sum=0;
+		int digitcount=String.valueOf(input1).length();
+		int number=input1;
+		if(input1<0){
+			number*=-1;
+		}
+		if(digitcount==1)
+		{
+			sum=number;
+		}
+		while(digitcount!=1)
+		{
+			int currentsum=0;
+			while(number!=0){
+				currentsum+=number%10;
+				number/=10;
+			}
+			sum=currentsum;
+			digitcount=String.valueOf(sum).length();
+			number=sum;
+		}
+		if(input1<0)
+		{
+			sum*=-1;
+		}
+		return sum;
+	}
+}
+
+digitSum even: sum of even digits in N 
+======================================
+import java.io.*;
+import  java.util.*;
+class UserMainCode{
+public int EvendigitSum(int input1)
+{
+int sum=0;
+		while(input1!=0)
+		{
+			int r=input1%10;
+			if(r%2==0)
+			{
+              sum=sum+r;
+			}
+		input1/=10;
+		}
+		return sum;
+	}
+}
+
+digitSum odd: sum of odd digits in N
+====================================
+import java.io.*;
+import  java.util.*;
+class UserMainCode{
+public int OddigitSum(int input1)
+{
+int sum=0;
+		while(input1!=0)
+		{
+			int r=input1%10;
+			if(r%2!=0)
+			{
+              sum=sum+r;
+			}
+		input1/=10;
+		}
+		return sum;
+	}
+}
+
+digitSum opt: sum of even or odd digits 
+=======================================
+import java.io.*;
+import  java.util.*;
+class UserMainCode{
+public int EvenOddigitSum(int input1)
+{
+int evensum=0,oddsum=0;
+		while(input1!=0)
+		{
+			int r=input1%10;
+			if(r%2==0)
+			{
+			   evensum=evensum+r;
+			}
+			if(r%2!=0)
+			{
+			   oddsum=oddsum+r;
+			}
+            input1/=10;
+
+		}
+		if(input2.equals("even"))
+		return evensum;
+		else
+		return oddsum;
+	}
+}
